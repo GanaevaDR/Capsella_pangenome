@@ -1,3 +1,3 @@
 # Capsella_pangenome
 
-This project is dedicated to analysis of gene evolution of resent allopolyploid plant _Capsella-bursa pastoris_
+This project is dedicated to analysis of gene evolution of recent allopolyploid plant _Capsella-bursa pastoris_
