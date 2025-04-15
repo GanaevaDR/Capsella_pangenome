@@ -70,8 +70,8 @@ minimap2 -ax splice -k14 -uf -t 10 -G 10k C_rubella.fasta Co_larger.fasta > Co_l
 This script:
 
 - merges files with average gene coverage per sample into a single table
-- filters out low covered samples,
-- filters out genes with low coverage, 
+- filters out low covered samples
+- filters out genes with low coverage
 - outputs conserved genes that belong to orthopairs in paren species
 
 ## Analysis of absent and core genes in _Capsella bursa-pastoris_
