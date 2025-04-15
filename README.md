@@ -35,7 +35,8 @@ syngap dual \
 --sp2gff=Cr.SynGAP.gff3 \
 --sp1=Co \
 --sp2=Cr \
---datatype prot ```
+--datatype prot
+```
 
 
 ### Processing of DNA sequencing data
