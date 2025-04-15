@@ -38,9 +38,14 @@ syngap dual \
 --datatype prot
 ```
 
+- **extract_orthopairs_syngap.R** - parse output of SynGAP to extract oprthopairs
+- 
+- **cds_length_estimation.R** - calculate CDS length difference in orthopairs
+- 
+- **cds_length_plots.R** - draw CDS length distribution plots
+
 
 ### Processing of DNA sequencing data
-
 
 ### Analysis of conserved genes in parent species 
 
