@@ -43,7 +43,7 @@ syngap dual \
 - **cds_length_estimation.R** - calculate CDS length difference in orthopairs
 - **cds_length_plots.R** - draw CDS length distribution plots
 
-minimap2 commands for alignment of CDS to the genome
+- minimap2 commands for alignment of CDS to the genome
 
 create index files:
 ```
@@ -68,19 +68,23 @@ minimap2 -ax splice -k14 -uf -t 10 -G 10k C_rubella.fasta Co_larger.fasta > Co_l
   
 ## Analysis of conserved genes in parent species 
 **conserved_genes_parent_species.R** 
+
 This script:
+
 -merges files with average gene coverage per sample into a single table
 -filters out low covered samples,
-filters out genes with low coverage, 
+-filters out genes with low coverage, 
 -outputs conserved genes that belong to orthopairs in paren species
 
 ## Analysis of absent and core genes in _Capsella bursa-pastoris_
 **absent_core_genes_Cbp.R**
+
 This script:
+
 -merges files with average gene breadth per sample into a single table
-- plots average gene breadth distribution subgenome-wise
+-plots average gene breadth distribution subgenome-wise
 -filters genes with average breadth 0 and 1
 -provides intersection of genes with average breadth 0 and 1 in samples and draws Venn diagrams
-- filters 1/0 fraction (one gene from the orthopair is present)
+-filters 1/0 fraction (one gene from the orthopair is present)
 
 ## Analysis of nucleotide variants in core genes of _Capsella bursa-pastoris_
