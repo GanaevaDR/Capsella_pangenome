@@ -194,8 +194,6 @@ Cr_Cg_thr <- Cr_Cg_means * 0.1
 Cr_Cg_mean_clone <- Cr_Cg
 Cr_Cg_mean_clone$count <- apply(Cr_Cg, 1, function(row) sum(row > Cr_Cg_thr))
 
-
-#11.02.25
 library(dplyr)
 Co_filt <- filter(Co_mean_clone, count==ncol(Co_mean))
 Co_filt$Co <- rownames(Co_filt)
