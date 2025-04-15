@@ -3,7 +3,7 @@
 This project is dedicated to the analysis of gene evolution of recent allopolyploid plant _Capsella bursa-pastoris_
 
 
-### Orthologization
+## Orthologization
 - ProteinOrtho (by default)
   
 ``` proteinortho --cpus=1 C_rub_proteins.faa C_ori_proteins.faa > proteinortho.log ```
@@ -57,7 +57,7 @@ minimap2 -ax splice -k14 -uf -t 10 -G 10k C_orientalis.fasta Cr_larger.fasta > C
 minimap2 -ax splice -k14 -uf -t 10 -G 10k C_rubella.fasta Co_larger.fasta > Co_larger_genes_to_Cr_genome.sam
 ```
 
-### Processing of DNA sequencing data
+## Processing of DNA sequencing data
 - **raw_reads_qc.sh** - perform quality controls of raw reads
 - **trim_qc_short_reads.sh** - perform trimming and quality control of trimmed reads
 - **trimming_long_reads.sh** - trimming of long reads
@@ -66,10 +66,21 @@ minimap2 -ax splice -k14 -uf -t 10 -G 10k C_rubella.fasta Co_larger.fasta > Co_l
 - **gene_coverage.sh** - calculate average gene coverage (depth) per sample
 - **gene_breadth.sh** - calculate average gene breadth per sample
   
-### Analysis of conserved genes in parent species 
+## Analysis of conserved genes in parent species 
+**conserved_genes_parent_species.R** 
+This script:
+-merges files with average gene coverage per sample into a single table
+-filters out low covered samples,
+filters out genes with low coverage, 
+-outputs conserved genes that belong to orthopairs in paren species
 
+## Analysis of absent and core genes in _Capsella bursa-pastoris_
+**absent_core_genes_Cbp.R**
+This script:
+-merges files with average gene breadth per sample into a single table
+- plots average gene breadth distribution subgenome-wise
+-filters genes with average breadth 0 and 1
+-provides intersection of genes with average breadth 0 and 1 in samples and draws Venn diagrams
+- filters 1/0 fraction (one gene from the orthopair is present)
 
-### Analysis of absent and core genes in _Capsella bursa-pastoris_
-
-
-### Analysis of nucleotide variants in core genes of _Capsella bursa-pastoris_
+## Analysis of nucleotide variants in core genes of _Capsella bursa-pastoris_
