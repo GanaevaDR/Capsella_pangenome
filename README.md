@@ -1,6 +1,6 @@
 # Capsella_pangenome
 
-This project is dedicated to the analysis of gene evolution of recent allopolyploid plant _Capsella bursa-pastoris_
+This project is dedicated to the analysis of gene evolution of recent allopolyploid plant _Capsella bursa-pastoris_.
 
 
 ## Orthologization
@@ -49,7 +49,8 @@ syngap dual \
 #create index files:
 minimap2 -d C_orientalis.mmi C_orientalis.fasta
 minimap2 -d C_rubella.mmi C_rubella.fasta
-
+```
+```
 # run minimap2 with permission for intron gaps:
 minimap2 -ax splice -k14 -uf -t 10 -G 10k C_orientalis.fasta Cr_larger.fasta > Cr_larger_genes_to_Co_genome.sam
 minimap2 -ax splice -k14 -uf -t 10 -G 10k C_rubella.fasta Co_larger.fasta > Co_larger_genes_to_Cr_genome.sam
@@ -94,4 +95,4 @@ This script:
 # Build database in SNPEff
 snpEff build -gff3 -v Co_Cr_reference
 ```
-snpeff_run.sh - run SnpEff on variants files in VCF format
+**snpeff_run.sh** - run SnpEff on variants files in VCF format
