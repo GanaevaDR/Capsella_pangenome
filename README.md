@@ -95,4 +95,4 @@ This script:
 # Build database in SNPEff
 snpEff build -gff3 -v Co_Cr_reference
 ```
-**snpeff_run.sh** - run SnpEff on variants files in VCF format
+**snpeff_run.sh** - run SnpEff on files with variants in VCF format
