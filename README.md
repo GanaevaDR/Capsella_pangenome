@@ -57,7 +57,7 @@ minimap2 -ax splice -k14 -uf -t 10 -G 10k C_rubella.fasta Co_larger.fasta > Co_l
 ```
 
 ## 2. Processing of DNA sequencing data
-- **raw_reads_qc.sh** - perform quality controls of raw reads
+- **raw_reads_qc.sh** - perform quality controls of raw DNA-seq reads
 - **trim_qc_short_reads.sh** - perform trimming and quality control of trimmed reads
 - **trimming_long_reads.sh** - trimming of long reads
 - **mapping_filter_short_reads.sh** - mapping and filtration of unique correctly mapped Illumina short reads
@@ -83,7 +83,7 @@ This script:
 - merges files with average gene breadth per sample into a single table
 - plots average gene breadth distribution subgenome-wise
 - filters genes with average breadth 0 and 1
-- provides intersection of genes with average breadth 0 and 1 in samples and draws Venn diagrams
+- provides intersection of genes with average breadth 0 and 1 in samples and draws UpSet diagrams
 - filters 1/0 fraction (one gene from the orthopair is present)
 
 ## 5. Analysis of nucleotide variants in core genes of _Capsella bursa-pastoris_
@@ -96,3 +96,12 @@ This script:
 snpEff build -gff3 -v Co_Cr_reference
 ```
 **snpeff_run.sh** - run SnpEff on files with variants in VCF format
+- **filter_mutations_in_exons.py** - filter records in VCF files that corresponds to mutations in exons
+- **filter_unique_conserved_genes.py** - extract unique genes that correspond to conserved parent gene set from VCF files
+- **GO_analysis_mutations.R** - perfrom analysis of GO enrichment using gene sets obtained from filter_unique_conserved_genes.py and output from David tool (https://davidbioinformatics.nih.gov/summary.jsp)
+
+## 6. RNA-seq analysis
+- **RNA_seq_raw_qc.sh** - quality controls of raw RNA-seq reads
+- **RNA_seq_trimming.sh** - perform trimming and quality control of trimmed reads
+- **RNA_seq_mapping_quantification.sh** - mapping and quantification of trimmed reads
+- **RNA_seq_merge_readcount.py** - merge output tables with readcounts per sample into a single table
