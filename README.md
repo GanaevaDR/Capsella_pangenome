@@ -95,7 +95,7 @@ This script:
 # Build database in SNPEff
 snpEff build -gff3 -v Co_Cr_reference
 ```
-**snpeff_run.sh** - run SnpEff on files with variants in VCF format
+- **snpeff_run.sh** - run SnpEff on files with variants in VCF format
 - **filter_mutations_in_exons.py** - filter records in VCF files that corresponds to mutations in exons
 - **filter_unique_conserved_genes.py** - extract unique genes that correspond to conserved parent gene set from VCF files
 - **GO_analysis_mutations.R** - perfrom analysis of GO enrichment using gene sets obtained from filter_unique_conserved_genes.py and output from David tool (https://davidbioinformatics.nih.gov/summary.jsp)
