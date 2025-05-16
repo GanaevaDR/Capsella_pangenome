@@ -150,6 +150,23 @@ grid.text("Genes with mean breadth 0", x = 0.5, y = 0.95, gp = gpar(fontsize = 1
 
 length(intersect(a3, cons_vec)) #14 from 316 are conserved in parent species
 
+#Plot intersection using UpSet
+library(UpSetR)
+
+gene_list <- list(
+  Eng = v1,
+  KBG = v2,
+  le3 = v3,
+  MSK = v4,
+  Mur = v5
+)
+
+# Create an UpSet object
+upset_data <- fromList(gene_list)
+
+# Generate the UpSet plot
+upset(upset_data, sets = names(gene_list), order.by = "freq", text.scale = 1.25)
+
 # Analyze conserved genes with breadth 1
 
 v1 <- rownames(P_bre[P_bre$res_Eng==1 ,]) 
@@ -202,6 +219,21 @@ venn.plot <- venn.diagram(
 grid.draw(venn.plot)
 grid.text("Genes with average gene breadth 1", x = 0.5, y = 0.95, gp = gpar(fontsize = 10, fontface = "bold"))
 
+# Plot intersection using UpSet
+
+gene_list <- list(
+  Eng = v1,
+  KBG = v2,
+  le3 = v3,
+  MSK = v4,
+  Mur = v5
+)
+
+# Create an UpSet object
+upset_data <- fromList(gene_list)
+
+# Generate the UpSet plot
+upset(upset_data, sets = names(gene_list), order.by = "freq",text.scale = 1.25)
 
 #=================================================================================
 #=================================================================================
