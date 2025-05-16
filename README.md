@@ -90,12 +90,7 @@ This script:
 - **calling_filter_long_reads.sh** - perform calling and variant filtration for PacBio reads of _Capsella bursa-pastoris_
 - **annotate_variants.sh** - merge variants and gene annotation
 - **filter_target_genes.py** - filter annotated variants for those belonging to target genes of our interest
-- annotate variants using SnpEff:
-```
-# Build database in SNPEff
-snpEff build -gff3 -v Co_Cr_reference
-```
-- **snpeff_run.sh** - run SnpEff on files with variants in VCF format
+- **snpeff_run.sh** -annotate variants provided in VCF files using SnpEff
 - **filter_mutations_in_exons.py** - filter records in VCF files that correspond to mutations in exons
 - **filter_unique_conserved_genes.py** - extract unique genes that correspond to conserved parent gene set from VCF files
 - **GO_analysis_mutations.R** - perfrom analysis of GO enrichment using gene sets obtained from filter_unique_conserved_genes.py and output from David tool (https://davidbioinformatics.nih.gov/summary.jsp)
