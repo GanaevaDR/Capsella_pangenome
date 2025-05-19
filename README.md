@@ -100,4 +100,4 @@ This script:
 - **RNA_seq_trimming.sh** - perform trimming and quality control of trimmed reads
 - **RNA_seq_mapping_quantification.sh** - mapping and quantification of trimmed reads
 - **RNA_seq_merge_readcount.py** - merge output tables with readcounts per sample into a single table
-- **RNA_seq_analysis_genes.R** - RNA-seq analysis, from raw read counts to visualization
+- **RNA_seq_analysis_genes.R** - RNA-seq analysis from raw read counts to visualization
